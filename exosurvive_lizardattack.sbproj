@@ -4,8 +4,8 @@
   "Org": "scalesgames",
   "Ident": "exosurvive_lizardattack",
   "Schema": 1,
-  "IncludeSourceFiles": false,
-  "Resources": null,
+  "IncludeSourceFiles": true,
+  "Resources": "",
   "PackageReferences": [],
   "EditorReferences": null,
   "Metadata": {

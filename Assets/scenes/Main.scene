@@ -1,74 +1,23 @@
 {
-  "__guid": "7edde33a-8c9b-4d2c-8d37-3176fb4bfa0f",
+  "__guid": "a5f08583-3296-404a-99d8-73a49f2783d9",
   "GameObjects": [
     {
-      "__guid": "9d62c67e-50e9-42ee-ae49-29d052072766",
+      "__guid": "fe95baad-a8ce-4219-b1c7-ce4a67563dfe",
       "Flags": 0,
-      "Name": "Sun",
-      "Tags": "light_directional,light",
+      "Name": "Object",
       "Enabled": true,
       "Components": [
         {
-          "__type": "Sandbox.DirectionalLight",
-          "__guid": "cefe3537-da8f-49ab-9841-c1adedee70a6",
-          "FogMode": "Enabled",
-          "FogStrength": 1,
-          "LightColor": "0.91373,0.98039,1,1",
-          "Shadows": true,
-          "SkyColor": "1,1,1,1"
-        }
-      ]
-    },
-    {
-      "__guid": "e0a621f7-2be1-4647-8f47-96a4ea375ded",
-      "Flags": 0,
-      "Name": "Camera",
-      "Position": "-200,0,200",
-      "Tags": "maincamera",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "Sandbox.CameraComponent",
-          "__guid": "9db2f9c2-3608-4220-adbd-92ccd58557fd",
-          "BackgroundColor": "0.33333,0.46275,0.52157,1",
-          "ClearFlags": "All",
-          "FieldOfView": 60,
-          "IsMainCamera": true,
-          "Orthographic": false,
-          "OrthographicHeight": 1204,
-          "Priority": 1,
-          "RenderExcludeTags": "",
-          "RenderTags": "",
-          "TargetEye": "None",
-          "Viewport": "0,0,1,1",
-          "ZFar": 10000,
-          "ZNear": 10
-        }
-      ]
-    },
-    {
-      "__guid": "2d18fe2e-624e-45de-bf74-eb3216d62817",
-      "Flags": 0,
-      "Name": "Terrain",
-      "Position": "-1000,-1000,0",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "Sandbox.Terrain",
-          "__guid": "34dec19e-2f1c-4ec7-866c-4bfe9480b0e9",
+          "__type": "Sandbox.MapInstance",
+          "__guid": "755893ee-e7c3-48e4-84f0-16fad5bb6c53",
           "__version": 1,
-          "ClipMapLodExtentTexels": 256,
-          "ClipMapLodLevels": 6,
-          "DebugView": "None",
           "EnableCollision": true,
-          "IsTrigger": false,
-          "RenderType": "Off",
-          "Static": true,
-          "Storage": "terra.terrain",
-          "TerrainHeight": 10000,
-          "TerrainSize": 2000
+          "MapName": "maps/firstmap.vmap",
+          "NoOrigin": false,
+          "UseMapFromLaunch": false
         }
-      ]
+      ],
+      "Children": []
     }
   ],
   "SceneProperties": {
@@ -95,8 +44,6 @@
   "Title": "main",
   "Description": "",
   "ResourceVersion": 1,
-  "__references": [
-    "scalesgames.exosurvive_lizardattack"
-  ],
+  "__references": [],
   "__version": 1
 }

@@ -1,0 +1,22 @@
+{
+  "publish": {
+    "Enabled": false,
+    "ProjectConfig": {
+      "Title": "firstmap",
+      "Type": "map",
+      "Org": "local",
+      "Ident": "firstmap",
+      "Schema": 0,
+      "IncludeSourceFiles": false,
+      "Resources": null,
+      "PackageReferences": [],
+      "EditorReferences": [
+        "rustextended.terrain_grass#43376",
+        "scalesgames.neeko#62113"
+      ],
+      "Metadata": {
+        "SingleAssetSource": "maps/firstmap.vmap"
+      }
+    }
+  }
+}
