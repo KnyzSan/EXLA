@@ -53,10 +53,10 @@
       ]
     },
     {
-      "__guid": "10afcf41-b1ad-4d55-abdc-0d2e52435fbd",
+      "__guid": "6f98169c-3c1a-424f-9154-e30ce160a8dd",
       "Flags": 0,
-      "Name": "Player",
-      "Position": "-723.1936,-639.3401,4.999939",
+      "Name": "player",
+      "Position": "-498.3571,-816.3714,5",
       "Tags": "player",
       "Enabled": true,
       "__Prefab": "scenes/player.prefab",
