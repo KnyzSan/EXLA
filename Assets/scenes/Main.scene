@@ -1,15 +1,29 @@
 {
-  "__guid": "a5f08583-3296-404a-99d8-73a49f2783d9",
+  "__guid": "2f8b07d0-b198-46d4-b78b-6fb1ecdf70c8",
   "GameObjects": [
     {
-      "__guid": "fe95baad-a8ce-4219-b1c7-ce4a67563dfe",
+      "__guid": "887ea4ae-91ef-41cd-8860-5e5eab0991f9",
       "Flags": 0,
-      "Name": "Object",
+      "Name": "Terrain",
       "Enabled": true,
       "Components": [
         {
+          "__type": "Sandbox.Terrain",
+          "__guid": "d3fcbf84-475f-4b1e-b999-9029d6bbaee7",
+          "__version": 1,
+          "ClipMapLodExtentTexels": 256,
+          "ClipMapLodLevels": 6,
+          "DebugView": "None",
+          "EnableCollision": true,
+          "IsTrigger": false,
+          "RenderType": "Off",
+          "Static": true,
+          "TerrainHeight": 0,
+          "TerrainSize": 0
+        },
+        {
           "__type": "Sandbox.MapInstance",
-          "__guid": "755893ee-e7c3-48e4-84f0-16fad5bb6c53",
+          "__guid": "7f6b9599-c730-4936-8c16-41e0a177fde4",
           "__version": 1,
           "EnableCollision": true,
           "MapName": "maps/firstmap.vmap",
@@ -18,6 +32,35 @@
         }
       ],
       "Children": []
+    },
+    {
+      "__guid": "27988b9e-54fe-40d4-9443-fbb7f290d849",
+      "Flags": 0,
+      "Name": "Sun",
+      "Position": "-1598.987,-721.1755,557.3198",
+      "Tags": "light_directional,light",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.DirectionalLight",
+          "__guid": "fd6eb2d6-60e2-4ea1-8f28-43395002deb9",
+          "FogMode": "Enabled",
+          "FogStrength": 1,
+          "LightColor": "0.91373,0.98039,1,1",
+          "Shadows": true,
+          "SkyColor": "0,0,0,0"
+        }
+      ]
+    },
+    {
+      "__guid": "10afcf41-b1ad-4d55-abdc-0d2e52435fbd",
+      "Flags": 0,
+      "Name": "Player",
+      "Position": "-723.1936,-639.3401,4.999939",
+      "Tags": "player",
+      "Enabled": true,
+      "__Prefab": "scenes/player.prefab",
+      "__PrefabVariables": {}
     }
   ],
   "SceneProperties": {

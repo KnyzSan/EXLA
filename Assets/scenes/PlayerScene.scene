@@ -1,0 +1,61 @@
+{
+  "__guid": "cbd48eba-253f-4e99-acc5-d30c9fb21fcc",
+  "GameObjects": [
+    {
+      "__guid": "de1a1216-61ef-412e-898e-1dc79a3bba5b",
+      "Flags": 0,
+      "Name": "Player",
+      "Position": "-24,0,100",
+      "Tags": "player",
+      "Enabled": true,
+      "__Prefab": "scenes/player.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "4338c921-e08b-4d1e-a52f-a3eba1fc5bfa",
+      "Flags": 0,
+      "Name": "Sun",
+      "Position": "-19.31694,27.1637,164.6781",
+      "Rotation": "0,0,0.9502444,0.3115053",
+      "Tags": "light_directional,light",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.DirectionalLight",
+          "__guid": "d4ea02b8-1497-4257-9dd0-16ac969e4616",
+          "FogMode": "Enabled",
+          "FogStrength": 1,
+          "LightColor": "0.91373,0.98039,1,1",
+          "Shadows": true,
+          "SkyColor": "0,0,0,0"
+        }
+      ]
+    }
+  ],
+  "SceneProperties": {
+    "FixedUpdateFrequency": 50,
+    "MaxFixedUpdates": 5,
+    "NetworkFrequency": 30,
+    "NetworkInterpolation": true,
+    "ThreadedAnimation": true,
+    "TimeScale": 1,
+    "UseFixedUpdate": true,
+    "NavMesh": {
+      "Enabled": false,
+      "IncludeStaticBodies": true,
+      "IncludeKeyframedBodies": true,
+      "EditorAutoUpdate": true,
+      "AgentHeight": 64,
+      "AgentRadius": 16,
+      "AgentStepSize": 18,
+      "AgentMaxSlope": 40,
+      "ExcludedBodies": "",
+      "IncludedBodies": ""
+    }
+  },
+  "Title": "playerscene",
+  "Description": "",
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}

@@ -12,7 +12,8 @@
       "PackageReferences": [],
       "EditorReferences": [
         "rustextended.terrain_grass#43376",
-        "scalesgames.neeko#62113"
+        "scalesgames.neeko#62113",
+        "oleshkus.wall_1#57403"
       ],
       "Metadata": {
         "SingleAssetSource": "maps/firstmap.vmap"
