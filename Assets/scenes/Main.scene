@@ -61,6 +61,25 @@
       "Enabled": true,
       "__Prefab": "scenes/player.prefab",
       "__PrefabVariables": {}
+    },
+    {
+      "__guid": "803bfe9f-b098-46e5-a0f6-545f15bb2b89",
+      "Flags": 0,
+      "Name": "Object",
+      "Position": "-816.0219,-141.9384,312.5396",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.SkinnedModelRenderer",
+          "__guid": "03958cd8-a702-4f88-b54a-95313e2134e9",
+          "BodyGroups": 18446744073709551615,
+          "CreateBoneObjects": false,
+          "Model": "models/citizen/neeko.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1",
+          "UseAnimGraph": true
+        }
+      ]
     }
   ],
   "SceneProperties": {
@@ -87,6 +106,8 @@
   "Title": "main",
   "Description": "",
   "ResourceVersion": 1,
-  "__references": [],
+  "__references": [
+    "scalesgames.neeko"
+  ],
   "__version": 1
 }
