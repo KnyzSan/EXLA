@@ -27,7 +27,29 @@
         "JumpForce": 450,
         "MaxForce": 50,
         "RunSpeed": 310,
-        "Speed": 150
+        "Speed": 150,
+        "Body": {
+          "_type": "gameobject",
+          "go": "e43297b2-cb1b-44d0-a607-9372ae98a5e5"
+        },
+        "Head": {
+          "_type": "gameobject",
+          "go": "f3721691-7cb1-4039-81f1-aba53f90def3"
+        }
+      },
+      {
+        "__type": "Sandbox.Citizen.CitizenAnimationHelper",
+        "__guid": "9a59c920-c468-4cf4-9838-66e77342b759",
+        "BodyWeight": 1,
+        "EyesWeight": 1,
+        "HeadWeight": 1,
+        "LookAtEnabled": false,
+        "Target": {
+          "_type": "component",
+          "component_id": "aedc211f-9784-4abf-9822-b6f394583553",
+          "go": "e43297b2-cb1b-44d0-a607-9372ae98a5e5",
+          "component_type": "SkinnedModelRenderer"
+        }
       }
     ],
     "Children": [
@@ -54,20 +76,6 @@
             "RenderType": "On",
             "Tint": "1,1,1,1",
             "UseAnimGraph": true
-          },
-          {
-            "__type": "Sandbox.Citizen.CitizenAnimationHelper",
-            "__guid": "bee5ea4f-8d1d-4d59-9e1b-02b0a392a208",
-            "BodyWeight": 1,
-            "EyesWeight": 1,
-            "HeadWeight": 1,
-            "LookAtEnabled": false,
-            "Target": {
-              "_type": "component",
-              "component_id": "aedc211f-9784-4abf-9822-b6f394583553",
-              "go": "e43297b2-cb1b-44d0-a607-9372ae98a5e5",
-              "component_type": "SkinnedModelRenderer"
-            }
           }
         ]
       },

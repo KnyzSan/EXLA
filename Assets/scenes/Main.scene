@@ -37,7 +37,8 @@
       "__guid": "27988b9e-54fe-40d4-9443-fbb7f290d849",
       "Flags": 0,
       "Name": "Sun",
-      "Position": "-1598.987,-721.1755,557.3198",
+      "Position": "0,0,1000",
+      "Rotation": "0,0.9238795,0,0.3826834",
       "Tags": "light_directional,light",
       "Enabled": true,
       "Components": [
@@ -65,8 +66,9 @@
     {
       "__guid": "803bfe9f-b098-46e5-a0f6-545f15bb2b89",
       "Flags": 0,
-      "Name": "Object",
+      "Name": "Neeko",
       "Position": "-816.0219,-141.9384,312.5396",
+      "Tags": "lizard_girl",
       "Enabled": true,
       "Components": [
         {
