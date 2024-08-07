@@ -1,5 +1,5 @@
 {
-  "__guid": "2f8b07d0-b198-46d4-b78b-6fb1ecdf70c8",
+  "__guid": "df298b99-a1c6-4590-b3b3-9c1a3944d2e7",
   "GameObjects": [
     {
       "__guid": "887ea4ae-91ef-41cd-8860-5e5eab0991f9",
@@ -47,7 +47,7 @@
           "__guid": "fd6eb2d6-60e2-4ea1-8f28-43395002deb9",
           "FogMode": "Enabled",
           "FogStrength": 1,
-          "LightColor": "0.91373,0.98039,1,1",
+          "LightColor": "1,1,1,1",
           "Shadows": true,
           "SkyColor": "0,0,0,0"
         }
@@ -67,7 +67,6 @@
       "__guid": "803bfe9f-b098-46e5-a0f6-545f15bb2b89",
       "Flags": 0,
       "Name": "Neeko",
-      "Position": "-816.0219,-141.9384,312.5396",
       "Tags": "lizard_girl",
       "Enabled": true,
       "Components": [
@@ -77,7 +76,7 @@
           "BodyGroups": 18446744073709551615,
           "CreateBoneObjects": false,
           "Model": "models/citizen/neeko.vmdl",
-          "RenderType": "On",
+          "RenderType": "Off",
           "Tint": "1,1,1,1",
           "UseAnimGraph": true
         }

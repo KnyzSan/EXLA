@@ -1,0 +1,14 @@
+D:\SteamLibrary\steamapps\common\sbox\.vs\output\exosurvive_lizardattack.xml
+D:\SteamLibrary\steamapps\common\sbox\.vs\output\exosurvive_lizardattack.deps.json
+D:\SteamLibrary\steamapps\common\sbox\.vs\output\exosurvive_lizardattack.dll
+D:\SteamLibrary\steamapps\common\sbox\.vs\output\exosurvive_lizardattack.pdb
+D:\секретная папка\ES_LA\exosurvive_lizardattack\Code\obj\Debug\exosurvive_lizardattack.csproj.AssemblyReference.cache
+D:\секретная папка\ES_LA\exosurvive_lizardattack\Code\obj\Debug\exosurvive_lizardattack.GeneratedMSBuildEditorConfig.editorconfig
+D:\секретная папка\ES_LA\exosurvive_lizardattack\Code\obj\Debug\exosurvive_lizardattack.AssemblyInfoInputs.cache
+D:\секретная папка\ES_LA\exosurvive_lizardattack\Code\obj\Debug\exosurvive_lizardattack.AssemblyInfo.cs
+D:\секретная папка\ES_LA\exosurvive_lizardattack\Code\obj\Debug\exosurvive_lizardattack.csproj.CoreCompileInputs.cache
+D:\секретная папка\ES_LA\exosurvive_lizardattack\Code\obj\Debug\exosurvi.21B3BAA7.Up2Date
+D:\секретная папка\ES_LA\exosurvive_lizardattack\Code\obj\Debug\exosurvive_lizardattack.dll
+D:\секретная папка\ES_LA\exosurvive_lizardattack\Code\obj\Debug\refint\exosurvive_lizardattack.dll
+D:\секретная папка\ES_LA\exosurvive_lizardattack\Code\obj\Debug\exosurvive_lizardattack.pdb
+D:\секретная папка\ES_LA\exosurvive_lizardattack\Code\obj\Debug\ref\exosurvive_lizardattack.dll

@@ -15,7 +15,7 @@ public sealed class PlayerMovement : Component
 	[Property] public GameObject Body{get; set;}	//обязательны БЛЯТЬ!!!
 
 	public Vector3 WishVelocity = Vector3.Zero;
-	public bool IsCrounching = false;
+	public bool IsCrouching = false;
 	public bool IsSprinting = false;
 
 	private CharacterController characterController;
@@ -29,9 +29,21 @@ public sealed class PlayerMovement : Component
 
 	protected override void OnUpdate()
 	{
+		UpdateCrouching();
+		IsSprinting = Input.Down("Run");
+		if(Input.Pressed("Jump")) Jump();
+
+		UpdateAnimations();
 	}
 
-	void BildWishVelocity()
+	protected override void OnFixedUpdate()
+	{
+		BuildWishVelocity();
+		RotateBody();
+		Move();
+	}
+
+	void BuildWishVelocity()
 	{
 		WishVelocity = 0;
 
@@ -44,7 +56,7 @@ public sealed class PlayerMovement : Component
 		WishVelocity = WishVelocity.WithZ(0);
 		if(!WishVelocity.IsNearZeroLength) WishVelocity = WishVelocity.Normal;
 
-		if (IsCrounching) WishVelocity *= CrouchSpeed;
+		if (IsCrouching) WishVelocity *= CrouchSpeed;
 		else if (IsSprinting) WishVelocity *= RunSpeed;
 		else WishVelocity *= Speed;
 	}
@@ -61,11 +73,70 @@ public sealed class PlayerMovement : Component
 		}
 		else
 		{
-			characterController.Velocity += gravity *Time.Delta * 0.5f;
+			characterController.Velocity += gravity * Time.Delta * 0.5f;
 			characterController.Accelerate(WishVelocity.ClampLength(MaxForce));
 			characterController.ApplyFriction(AirControl);
 		}
 
-		characterController.Move(); //https://youtu.be/5hDENSPlCts?si=ljScqgiM7QYGrj1K&t=875
+		characterController.Move(); 
+
+		if(!characterController.IsOnGround)
+		{
+			characterController.Velocity += gravity * Time.Delta * 0.5f;
+		}
+		else
+		{
+			characterController.Velocity = characterController.Velocity.WithZ(0);
+		}
+	}
+
+	void RotateBody()
+	{
+		if(Body is null) return;
+
+		var targetAngle = new Angles(0, Head.Transform.Rotation.Yaw(), 0).ToRotation();
+		float rotateDifference = Body.Transform.Rotation.Distance(targetAngle);
+		
+		if(rotateDifference > 50f || characterController.Velocity.Length > 10f)
+		{
+			Body.Transform.Rotation = Rotation.Lerp(Body.Transform.Rotation, targetAngle, Time.Delta * 2f);
+		}
+	}
+
+	void Jump()
+	{
+		if(!characterController.IsOnGround) return;
+
+		characterController.Punch( Vector3.Up * JumpForce);
+		animationHelper?.TriggerJump();
+	}
+
+	void UpdateAnimations()
+	{
+		if(animationHelper is null) return;
+
+		animationHelper.WithWishVelocity(WishVelocity);
+		animationHelper.WithVelocity(characterController.Velocity);
+		animationHelper.AimAngle = Head.Transform.Rotation;
+		animationHelper.IsGrounded = characterController.IsOnGround;
+		animationHelper.WithLook(Head.Transform.Rotation.Forward, 1f, 0.75f, 0.5f);
+		animationHelper.MoveStyle = CitizenAnimationHelper.MoveStyles.Run;
+		animationHelper.DuckLevel = IsCrouching? 1f : 0f;
+	}
+
+	void UpdateCrouching()
+	{
+		if(characterController is null) return;
+
+		if(Input.Pressed("Crouch") && !IsCrouching)
+		{
+			IsCrouching = true;
+			characterController.Height /= 2f;
+		}
+		if(Input.Released("Crouch") && IsCrouching)
+		{
+			IsCrouching = false;
+			characterController.Height *= 2f;
+		}
 	}
 }
