@@ -8,20 +8,6 @@
       "Enabled": true,
       "Components": [
         {
-          "__type": "Sandbox.Terrain",
-          "__guid": "d3fcbf84-475f-4b1e-b999-9029d6bbaee7",
-          "__version": 1,
-          "ClipMapLodExtentTexels": 256,
-          "ClipMapLodLevels": 6,
-          "DebugView": "None",
-          "EnableCollision": true,
-          "IsTrigger": false,
-          "RenderType": "Off",
-          "Static": true,
-          "TerrainHeight": 0,
-          "TerrainSize": 0
-        },
-        {
           "__type": "Sandbox.MapInstance",
           "__guid": "7f6b9599-c730-4936-8c16-41e0a177fde4",
           "__version": 1,
@@ -29,6 +15,22 @@
           "MapName": "maps/firstmap.vmap",
           "NoOrigin": false,
           "UseMapFromLaunch": false
+        },
+        {
+          "__type": "Sandbox.Terrain",
+          "__guid": "e7e58720-b80e-4b93-bae0-7799a07a2a8a",
+          "__version": 1,
+          "__enabled": false,
+          "ClipMapLodExtentTexels": 256,
+          "ClipMapLodLevels": 6,
+          "DebugView": "None",
+          "EnableCollision": true,
+          "IsTrigger": false,
+          "RenderType": "Off",
+          "Static": true,
+          "Storage": "terra.terrain",
+          "TerrainHeight": 10000,
+          "TerrainSize": 19968
         }
       ],
       "Children": []
@@ -54,16 +56,6 @@
       ]
     },
     {
-      "__guid": "6f98169c-3c1a-424f-9154-e30ce160a8dd",
-      "Flags": 0,
-      "Name": "player",
-      "Position": "-498.3571,-816.3714,5",
-      "Tags": "player",
-      "Enabled": true,
-      "__Prefab": "scenes/player.prefab",
-      "__PrefabVariables": {}
-    },
-    {
       "__guid": "803bfe9f-b098-46e5-a0f6-545f15bb2b89",
       "Flags": 0,
       "Name": "Neeko",
@@ -84,7 +76,7 @@
     }
   ],
   "SceneProperties": {
-    "FixedUpdateFrequency": 50,
+    "FixedUpdateFrequency": 60,
     "MaxFixedUpdates": 5,
     "NetworkFrequency": 30,
     "NetworkInterpolation": true,
