@@ -11,13 +11,24 @@ public sealed class ShotPlayer : Component
 	[Property][Category("Показатели")] public float WalkSpeed = 125f;
 	[Property][Category("Показатели")] public float RunSpeed = 250f;
 	[Property][Category("Показатели")] public float JumpStrength = 400f;
+	[Property][Category("Показатели")] public float PunchStrength = 1f;
+	[Property][Category("Показатели")] public float PunchCooldown = 0.5f;
+	[Property][Category("Показатели")] public float PunchRange = 50f;
+
 
 	public Angles EyeAngles {get; set;}
+	public Vector3 EyeWorldPosition => Transform.Local.PointToWorld(EyePosition);
 	Transform _initialCameraTransform;
+	TimeSince _lastPunch;
 
 	protected override void DrawGizmos()
 	{
-		Gizmo.Draw.LineSphere(EyePosition, 10f);
+		if ( !Gizmo.IsSelected ) return;
+
+		var draw = Gizmo.Draw;
+
+		draw.LineSphere(EyePosition, 10f);
+		draw.LineCylinder( EyePosition, EyePosition + Transform.Rotation.Forward * PunchRange, 5f, 5f, 10 );
 	}
 	protected override void OnUpdate()
 	{
@@ -26,7 +37,17 @@ public sealed class ShotPlayer : Component
 		Transform.Rotation = Rotation.FromYaw(EyeAngles.yaw);
 
 		if(Camera != null)
-			Camera.Transform.Local = _initialCameraTransform.RotateAround(EyePosition,EyeAngles.WithYaw(0f));
+		{
+			var cameraTransform = _initialCameraTransform.RotateAround(EyePosition,EyeAngles.WithYaw(0f));
+			var cameraPosition = Transform.Local.PointToWorld(cameraTransform.Position);
+			var cameraTrace = Scene.Trace.Ray(EyeWorldPosition, cameraPosition)
+				.Size(5f)
+				.IgnoreGameObjectHierarchy(GameObject)
+				.WithoutTags("player")
+				.Run();
+			Camera.Transform.Position = cameraTrace.EndPosition;
+			Camera.Transform.LocalRotation = cameraTransform.Rotation;
+		}
 	}
 	protected override void OnFixedUpdate()
 	{
@@ -74,5 +95,13 @@ public sealed class ShotPlayer : Component
 				var clothing = ClothingContainer.CreateFromLocalUser();
 				clothing.Apply(model);
 			}
+	}
+
+	public void Punch()
+	{
+		if (Animator != null)
+		{
+			Animator.HoldType = CitizenAnimationHelper.HoldTypes.Punch;
+		}
 	}
 }

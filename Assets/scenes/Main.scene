@@ -1,46 +1,12 @@
 {
-  "__guid": "df298b99-a1c6-4590-b3b3-9c1a3944d2e7",
+  "__guid": "3cdb58a3-5979-42aa-bd9f-ec4ac41de3cc",
   "GameObjects": [
-    {
-      "__guid": "887ea4ae-91ef-41cd-8860-5e5eab0991f9",
-      "Flags": 0,
-      "Name": "Terrain",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "Sandbox.MapInstance",
-          "__guid": "7f6b9599-c730-4936-8c16-41e0a177fde4",
-          "__version": 1,
-          "EnableCollision": true,
-          "MapName": "maps/firstmap.vmap",
-          "NoOrigin": false,
-          "UseMapFromLaunch": false
-        },
-        {
-          "__type": "Sandbox.Terrain",
-          "__guid": "e7e58720-b80e-4b93-bae0-7799a07a2a8a",
-          "__version": 1,
-          "__enabled": false,
-          "ClipMapLodExtentTexels": 256,
-          "ClipMapLodLevels": 6,
-          "DebugView": "None",
-          "EnableCollision": true,
-          "IsTrigger": false,
-          "RenderType": "Off",
-          "Static": true,
-          "Storage": "terra.terrain",
-          "TerrainHeight": 10000,
-          "TerrainSize": 19968
-        }
-      ],
-      "Children": []
-    },
     {
       "__guid": "27988b9e-54fe-40d4-9443-fbb7f290d849",
       "Flags": 0,
       "Name": "Sun",
       "Position": "0,0,1000",
-      "Rotation": "0,0.9238795,0,0.3826834",
+      "Rotation": "0,0.7071068,0,0.7071068",
       "Tags": "light_directional,light",
       "Enabled": true,
       "Components": [
@@ -50,29 +16,57 @@
           "FogMode": "Enabled",
           "FogStrength": 1,
           "LightColor": "1,1,1,1",
-          "Shadows": true,
-          "SkyColor": "0,0,0,0"
+          "Shadows": false,
+          "SkyColor": "1,1,1,1"
         }
       ]
     },
     {
-      "__guid": "803bfe9f-b098-46e5-a0f6-545f15bb2b89",
+      "__guid": "3d496cd7-5fb7-4cfa-9447-a13e3cc3c5ce",
       "Flags": 0,
-      "Name": "Neeko",
-      "Tags": "lizard_girl",
+      "Name": "Object",
       "Enabled": true,
       "Components": [
         {
-          "__type": "Sandbox.SkinnedModelRenderer",
-          "__guid": "03958cd8-a702-4f88-b54a-95313e2134e9",
-          "BodyGroups": 18446744073709551615,
-          "CreateBoneObjects": false,
-          "Model": "models/citizen/neeko.vmdl",
-          "RenderType": "Off",
-          "Tint": "1,1,1,1",
-          "UseAnimGraph": true
+          "__type": "Sandbox.MapInstance",
+          "__guid": "0d01e6d7-0225-4bd1-a228-bf47de956b36",
+          "__version": 1,
+          "EnableCollision": true,
+          "MapName": "maps/firstmap.vmap",
+          "NoOrigin": false,
+          "UseMapFromLaunch": false
         }
-      ]
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "38a6288c-6163-4955-bb97-d07559183a6d",
+      "Flags": 0,
+      "Name": "Object",
+      "Position": "1040,0,-256",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.MapInstance",
+          "__guid": "ac0b3eba-8e07-4054-bc31-b085a06909d3",
+          "__version": 1,
+          "EnableCollision": true,
+          "MapName": "maps/level1.vmap",
+          "NoOrigin": false,
+          "UseMapFromLaunch": false
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "100fd136-2314-49b9-b32e-7376308ed470",
+      "Flags": 0,
+      "Name": "def_player",
+      "Position": "888.8599,-42.04724,4",
+      "Tags": "player",
+      "Enabled": true,
+      "__Prefab": "scenes/def_player.prefab",
+      "__PrefabVariables": {}
     }
   ],
   "SceneProperties": {
@@ -99,8 +93,6 @@
   "Title": "main",
   "Description": "",
   "ResourceVersion": 1,
-  "__references": [
-    "scalesgames.neeko"
-  ],
+  "__references": [],
   "__version": 1
 }
